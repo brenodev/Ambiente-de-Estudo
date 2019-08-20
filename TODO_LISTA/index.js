@@ -7,19 +7,33 @@ var buttonElement = document.querySelector('#app div button')
 var todos = [
   'Fazer Café',
   'Terminar Curso',
-  'Zera Game'
+  'Zerar Game'
 ]
-// Função para percorrer array e renderizar os TODO's e mostrar em tela
-function renderTodo(){
+function renderTodos(){
+  // Função para percorrer array e renderizar os TODO's e mostrar em tela
   for (todo of todos) {
+ 
     var todoElement = document.createElement('li');
+ 
     var todoText = document.createTextNode(todo);
+ 
+    var linkElement = document.createElement('a')
+    linkElement.setAttribute('href', '#')
 
-    todoElement.appendChild(todoText);
+    var pos = todos.indexOf(todo);
+    linkElement.setAttribute('onclick', 'deleteTodo(' + pos + ')')
+
+    var linkText = document.createTextNode('Excluir')
+
+    linkElement.appendChild(linkText)
+    
+    todoElement.appendChild(todoText)
+    todoElement.appendChild(linkElement)
+    
     listElement.appendChild(todoElement)
   }
 }
-renderTodo()
+renderTodos()
 /*
   Funcionalidade para adicionar novo TODO, para isso preciso ouvir o clique no
   botão adicionar,recuperar o valor do input e adicionar como novo item no array
@@ -35,7 +49,15 @@ function addTodo(){
   //apagar o texto atual do input
   inputElement.value = ''
   // renderizar novo TODO que acaba de ser adicionado no final
-  renderTodo();
+  renderTodos();
 }
 // chamar função para adicionar novo TODO 
 buttonElement.onclick = addTodo
+
+/*
+  Funcionalidade para Remover um TODO, retirar ele da lista por completo. 
+*/
+function deleteTodo(pos){
+  todos.splice(pos, 1)
+  renderTodos()
+}
