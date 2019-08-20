@@ -9,3 +9,14 @@ var todos = [
   'Terminar Curso',
   'Zera Game'
 ]
+// Função para percorrer array e renderizar os TODO's e mostrar em tela
+function renderTodo(){
+  for (todo of todos) {
+    var todoElement = document.createElement('li');
+    var todoText = document.createTextNode(todo);
+
+    todoElement.appendChild(todoText);
+    listElement.appendChild(todoElement)
+  }
+}
+renderTodo()
