@@ -20,3 +20,22 @@ function renderTodo(){
   }
 }
 renderTodo()
+/*
+  Funcionalidade para adicionar novo TODO, para isso preciso ouvir o clique no
+  botão adicionar,recuperar o valor do input e adicionar como novo item no array
+  de TODO's
+*/
+function addTodo(){
+  //defino esse metodo para não renderizar todos items do array
+  listElement.innerHTML = '';
+  // recuperar valor do input 
+  var todoText = inputElement.value;
+  //retornar todo para o array
+  todos.push(todoText)
+  //apagar o texto atual do input
+  inputElement.value = ''
+  // renderizar novo TODO que acaba de ser adicionado no final
+  renderTodo();
+}
+// chamar função para adicionar novo TODO 
+buttonElement.onclick = addTodo
