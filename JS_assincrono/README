@@ -1,0 +1,2 @@
+##AJAX: É uma requisição assíncrona que realizamos de um backend.
+Usamos o AJAX para requisitar algo do servidor sem ter que atualizar a página.
