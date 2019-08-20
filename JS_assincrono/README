@@ -1,8 +1,10 @@
 ##AJAX: É uma requisição assíncrona que realizamos de um backend.
 Usamos o AJAX para requisitar algo do servidor sem ter que atualizar a página.
 
-##Promises: São códigos que não vão influenciar na linha do tempo do 
+##PROMISES: São códigos que não vão influenciar na linha do tempo do 
 nosso código javascript, são funções que vão devolver o valor de um 
 resultado seja ele sucesso ou erro, e não precisamos nos preocupar 
 quando o resultado vai retornar, pois o javascript continuará 
 executando normalmente!
+
+##AXIOS: Busca requisiçãodo servidor, ele é um rappere ja reconhece a requisição como um JSON 
