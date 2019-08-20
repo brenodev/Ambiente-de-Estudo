@@ -1,0 +1,12 @@
+Preciso referenciar quais elementos eu tenho na minha DOM  e que será modificado
+no javascript, o que será necessário fazer uma modificação ou recuperar um valor
+ou recuperar um evento do usuário segue eles :
+
+##Botão: Preciso saber quando o usuário clicar no botão para adicionar um novo 
+TODO
+
+##Input: Preciso saber do valor do input para quando o usuário clicar no botão ,
+pegar esse valor e adicionar na lista
+
+
+##Lista: Preciso dela pois nela será incluso novos itens de TODO.

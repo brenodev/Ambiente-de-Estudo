@@ -1,0 +1,1 @@
+É a linguagem javascript padronizada
